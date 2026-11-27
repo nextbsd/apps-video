@@ -1,0 +1,66 @@
+{
+  ApplicationName = Video;
+  ApplicationDescription = "Plays video and sound; records the camera and sound";
+  ApplicationRelease = "27.0";
+  Authors = ("Joseph Maloney <pkgdemonteam@gmail.com>");
+  URL = "License: BSD 2-Clause";
+  Copyright = "Copyright (C) 2026 Joseph Maloney";
+  NSHumanReadableCopyright = "Copyright (C) 2026 Joseph Maloney";
+  NSPrincipalClass = NSApplication;
+  NSIcon = "Video.png";
+  CFBundleIconFile = "Video.png";
+  NSExecutable = Video;
+  CFBundleIdentifier = "org.nextbsd.Video";
+  CFBundleName = Video;
+  CFBundleDisplayName = Video;
+  CFBundleShortVersionString = "27.0";
+  CFBundleVersion = "27.0";
+  /* What Video plays, as GNUstep's workspace reads it: files of these
+     extensions open in Video from File Viewer. Everything NextBSD's
+     ffmpeg demuxes and decodes. */
+  NSTypes = (
+    {
+      NSName = "QuickTime movie";
+      NSHumanReadableName = "QuickTime movie";
+      NSUnixExtensions = (mov, qt);
+      NSRole = Viewer;
+    },
+    {
+      NSName = "MPEG-4 movie";
+      NSHumanReadableName = "MPEG-4 movie";
+      NSUnixExtensions = (mp4, m4v, 3gp, 3g2, mj2);
+      NSRole = Viewer;
+    },
+    {
+      NSName = "Matroska video";
+      NSHumanReadableName = "Matroska video";
+      NSUnixExtensions = (mkv, webm);
+      NSRole = Viewer;
+    },
+    {
+      NSName = "AVI movie";
+      NSHumanReadableName = "AVI movie";
+      NSUnixExtensions = (avi);
+      NSRole = Viewer;
+    },
+    {
+      NSName = "MPEG movie";
+      NSHumanReadableName = "MPEG movie";
+      NSUnixExtensions = (mpg, mpeg, m1v, m2v, vob, ts, mts, m2ts);
+      NSRole = Viewer;
+    },
+    {
+      NSName = "Ogg video";
+      NSHumanReadableName = "Ogg video";
+      NSUnixExtensions = (ogv);
+      NSRole = Viewer;
+    },
+    {
+      NSName = "Sound";
+      NSHumanReadableName = "Sound";
+      NSUnixExtensions = (mp3, m4a, aac, flac, ogg, oga, opus, wav, aif,
+                          aiff, caf, au, ac3, mka);
+      NSRole = Viewer;
+    }
+  );
+}
